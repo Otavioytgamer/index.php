@@ -3,6 +3,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listagem de usuarios</title>
+    <link rel="stylesheet" href="dash.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <main>
     <div class="header-content">
@@ -29,8 +31,11 @@
                 <td>eric@unifev.edu.br</td>
                 <td>Administrador</td>
                 <td><span class="badge ativo">Ativo</span></td>
-                <td><button class="btn-icon"><i class="fa-solid fa-pen-to-square"></i></button></td>
-                
+                <td>
+                    <button class="btn-icon" title="Editar"><i class="fa-solid fa-pen-to-square"></i></button>
+                    <button class="btn-icon" title="Visualizar"><i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-icon" title="Excluir"><i class="fa-solid fa-trash"></i></button>
+                </td>      
             </tr>
             <tr>
                 <td>02</td>
@@ -38,16 +43,23 @@
                 <td>ana.souza@email.com</td>
                 <td>Editor</td>
                 <td><span class="badge ativo">Ativo</span></td>
-                <td><button class="btn-icon"><i class="fa-solid fa-pen"></i></button></td>
+                <td>
+                    <button class="btn-icon" title="Editar"><i class="fa-solid fa-pen-to-square"></i></button>
+                    <button class="btn-icon" title="Visualizar"><i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-icon" title="Excluir"><i class="fa-solid fa-trash"></i></button>
+                </td>
               </tr>
              <tr>
                 <td>03</td>
                 <td>Carlos lima</td>
                 <td>carlos.lima@servidor.com</td>
                 <td>Usuários</td>
-                <td><span class="badge ativo">inativo</span></td>
-                <td><button class="btn-icon"><i class="fa-solid fa-pen"></i></button></td>
-             </tr>
+                <td><span class="badge inativo">Inativo</span>
+                <td>
+                    <button class="btn-icon" title="Editar"><i class="fa-solid fa-pen-to-square"></i></button>
+                    <button class="btn-icon" title="Visualizar"><i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-icon" title="Excluir"><i class="fa-solid fa-trash"></i></button>
+                </td>
           </tbody>
      </table>
 </div>
@@ -65,7 +77,7 @@
     border-collapse: collapse;
   }
   th{
-    background-color: #2c3e50;
+    background-color: #000000;
     color: #ffffff;
     padding: 15px;
     text-align: left;
@@ -85,21 +97,30 @@ tbody tr:nth-child(even){
 tbody tr:hover{
     background-color: #f1f7ff;
 }
-.badge{
-    padding: 4px 10px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: bold;
-}
-
-.ativo { background-color: #d4edda; color: #155724;}
-.inativo { background-color: #f8d7da; color: #f80f26;}
-
 .btn-icon{
     background: none;
     border: none;
-    color: #004a8d;
+    color: #000000;
     cursor: pointer;
     font-size: 16px;
+    margin-right: 8px;
 }
+.btn-icon:hover{
+    color: #0066cc;
+}
+.badge{
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.badge.ativo{
+    background-color: #28a745;
+    color: white;
+}
+.badge.inativo{
+    background-color: #dc3545;
+    color: white;
+}
+
 </style>

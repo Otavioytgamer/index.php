@@ -13,8 +13,8 @@
         <nav>
             <ul>
                 <li><a href="#">Início</a></li>
-                <li><a href="#">Projetos</a></li>
-                <li><a href="#">Relatórios</a></li>
+                <li><a href="cad-usuario.php">Usuários</a></li>
+                <li><a href="usuarios.php">Relatórios</a></li>
                 <li><a href="#">Configurações</a></li>
             </ul>
 

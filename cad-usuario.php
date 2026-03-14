@@ -39,6 +39,7 @@
 
 
 <style>
+    
 .card-form {
     background: white;
     max-width: 700px; 
@@ -97,4 +98,5 @@ input:focus {
     border-radius: 6px;
     cursor: pointer;
     font-weight: bold;
-}</style>
+}
+</style>
