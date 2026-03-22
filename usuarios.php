@@ -1,18 +1,32 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listagem de usuarios</title>
-    <link rel="stylesheet" href="dash.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Gestão de Usuários</title>
+    <link rel="stylesheet" href="usuarios.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<main>
-    <div class="header-content">
-         <h2>Gestão de Usuários</h2>
-         <p>Visualize e gerencie as permissões dos usuários do sistema</p>
-    </div>
+</head>
+<body>
 
-    <div class="table-responsive">
+    <nav>
+        <a href="index.php">Início</a>
+        <a href="usuarios.php" class="active">Usuários</a>
+        <a href="#">Produtos</a>
+
+        <div class="perfil-usuario">
+            <img src="https://play-lh.googleusercontent.com/jeNGu6ehpO1E-44ltojEoEAmQApE015dsuFVeqVGsizBGzlydGV8aq5C_gZrj59F93s=w240-h480-rw" alt="Avatar">
+            <span>otavio augusto</span>
+        </div>
+    </nav>
+
+    <main>
+        <h1>Gestão de Usuários</h1>
+        <div class="header-content">
+            <p>Visualize e gerencie as permissões dos usuários do sistema</p>
+        </div>
+
         <table>
             <thead>
                 <tr>
@@ -22,105 +36,57 @@
                     <th>Acesso</th>
                     <th>Status</th>
                     <th>Ações</th>
-                </th>
-           </thead>
-         <tbody>
-            <tr>
-                <td>01</td>
-                <td>Eric Freitas</td>
-                <td>eric@unifev.edu.br</td>
-                <td>Administrador</td>
-                <td><span class="badge ativo">Ativo</span></td>
-                <td>
-                    <button class="btn-icon" title="Editar"><i class="fa-solid fa-pen-to-square"></i></button>
-                    <button class="btn-icon" title="Visualizar"><i class="fa-solid fa-eye"></i></button>
-                    <button class="btn-icon" title="Excluir"><i class="fa-solid fa-trash"></i></button>
-                </td>      
-            </tr>
-            <tr>
-                <td>02</td>
-                <td>Ana Souza</td>
-                <td>ana.souza@email.com</td>
-                <td>Editor</td>
-                <td><span class="badge ativo">Ativo</span></td>
-                <td>
-                    <button class="btn-icon" title="Editar"><i class="fa-solid fa-pen-to-square"></i></button>
-                    <button class="btn-icon" title="Visualizar"><i class="fa-solid fa-eye"></i></button>
-                    <button class="btn-icon" title="Excluir"><i class="fa-solid fa-trash"></i></button>
-                </td>
-              </tr>
-             <tr>
-                <td>03</td>
-                <td>Carlos lima</td>
-                <td>carlos.lima@servidor.com</td>
-                <td>Usuários</td>
-                <td><span class="badge inativo">Inativo</span>
-                <td>
-                    <button class="btn-icon" title="Editar"><i class="fa-solid fa-pen-to-square"></i></button>
-                    <button class="btn-icon" title="Visualizar"><i class="fa-solid fa-eye"></i></button>
-                    <button class="btn-icon" title="Excluir"><i class="fa-solid fa-trash"></i></button>
-                </td>
-          </tbody>
-     </table>
-</div>
-</main>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>01</td>
+                    <td>Eric Freitas</td>
+                    <td>eric@unifev.edu.br</td>
+                    <td>Administrador</td>
+                    <td><span class="status ativo">Ativo</span></td>
+                    <td class="acoes">
+                        <button title="Editar"><i class="fa-solid fa-pen"></i></button>
+                        <button title="Visualizar"><i class="fa-solid fa-eye"></i></button>
+                        <button title="Excluir"><i class="fa-solid fa-trash"></i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>02</td>
+                    <td>Ana Souza</td>
+                    <td>ana.souza@email.com</td>
+                    <td>Editor</td>
+                    <td><span class="status ativo">Ativo</span></td>
+                    <td class="acoes">
+                        <button title="Editar"><i class="fa-solid fa-pen"></i></button>
+                        <button title="Visualizar"><i class="fa-solid fa-eye"></i></button>
+                        <button title="Excluir"><i class="fa-solid fa-trash"></i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>03</td>
+                    <td>Carlos Lima</td>
+                    <td>carlos.lima@servidor.com</td>
+                    <td>Usuário</td>
+                    <td><span class="status inativo">Inativo</span></td>
+                    <td class="acoes">
+                        <button title="Editar"><i class="fa-solid fa-pen"></i></button>
+                        <button title="Visualizar"><i class="fa-solid fa-eye"></i></button>
+                        <button title="Excluir"><i class="fa-solid fa-trash"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
-<style>
-  .table-responsive{
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    overflow: hidden;
-  }
-  table{
-    width: 100%;
-    border-collapse: collapse;
-  }
-  th{
-    background-color: #000000;
-    color: #ffffff;
-    padding: 15px;
-    text-align: left;
-    font-size: 13px;
-    text-transform: uppercase;
-  }
+        <a href="cad-usuario.php" class="btn-add">
+            <i class="fa-solid fa-plus"></i> Adicionar Usuário
+        </a>
+    </main>
 
-  td{
-    padding: 15px;
-    border-bottom: 1px solid #eee;
-    font-size: 14px;
-    color: #444;
-  }
-tbody tr:nth-child(even){
-    background-color: #f9f9f9;
-}
-tbody tr:hover{
-    background-color: #f1f7ff;
-}
-.btn-icon{
-    background: none;
-    border: none;
-    color: #000000;
-    cursor: pointer;
-    font-size: 16px;
-    margin-right: 8px;
-}
-.btn-icon:hover{
-    color: #0066cc;
-}
-.badge{
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
-}
-.badge.ativo{
-    background-color: #28a745;
-    color: white;
-}
-.badge.inativo{
-    background-color: #dc3545;
-    color: white;
-}
+    <!-- Footer agora fica sempre embaixo -->
+    <footer>
+        © 2026 - Desenvolvido na aula de Web I
+    </footer>
 
-</style>
+</body>
+</html>
